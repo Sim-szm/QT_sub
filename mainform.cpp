@@ -1,6 +1,9 @@
 #include "mainform.h"
 #include "ui_mainform.h"
-
+#include <QtGui/QApplication>
+#include <QtSql>
+#include <QMessageBox>
+#include "database.h
 mainform::mainform(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::mainform)
@@ -62,20 +65,26 @@ void mainform::timer_upDate(){
 
 void mainform::on_btnStart_clicked()
 {
-
+    this->gameArea->init_Game();
+    this->gameArea->gameStart();
+    this->timer->start(this->gameArea->getmovespeed());
+    this->gameArea->setFocus();
+    ui->btnStart->setEnabled(false);
 }
 
 void mainform::on_btnList_clicked()
 {
-
+    topscore diag;
+    diag.show();
+    diag.exec();
 }
 
 void mainform::on_btnSlowDown_clicked()
 {
-
+    this->gameArea->setmovespeed(200);
 }
 
 void mainform::on_btnSpeedUp_clicked()
 {
-
+    this->gameArea->setmovespeed(500);
 }

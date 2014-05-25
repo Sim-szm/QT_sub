@@ -15,20 +15,18 @@ TEMPLATE = app
 SOURCES += main.cpp\
         mainform.cpp \
     database.cpp \
-    gamearea.cpp \
-    input.cpp \
     myitem.cpp \
+    input.cpp \
     topscore.cpp \
-    dialog.cpp
+    gamearea.cpp
 
 HEADERS  += mainform.h \
     database.h \
-    gamearea.h \
-    input.h \
     myitem.h \
+    input.h \
     topscore.h \
-    dialog.h
+    gamearea.h
 
 FORMS    += mainform.ui \
-    topscore.ui \
-    input.ui
+    input.ui \
+    topscore.ui
