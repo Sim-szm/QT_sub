@@ -19,9 +19,13 @@ public:
     GameArea(QWidget *parent = 0);
     GameArea(int speed,QWidget *parent = 0);
     ~GameArea();
-    
-private:
+public:
+    //public func
 
+private:
+    //private func
+private:
+    //private var
 };
 
 #endif // GAMEAREA_H
