@@ -27,7 +27,7 @@ private slots:
 
 private:
     Ui::mainform *ui;
-    GameArea * gameArea;
+    gamearea * gameArea;
     QTimer * timer;
     int num;
 };

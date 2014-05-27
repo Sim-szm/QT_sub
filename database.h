@@ -1,6 +1,6 @@
 #ifndef DATABASE_H
 #define DATABASE_H
-#include <QtSqlDatabase>
+#include <QSqlDatabase>
 class database{
 public:
     database();

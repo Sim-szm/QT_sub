@@ -3,7 +3,7 @@
 #include <QtGui/QApplication>
 #include <QtSql>
 #include <QMessageBox>
-#include "database.h
+#include "database.h"
 mainform::mainform(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::mainform)
