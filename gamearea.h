@@ -1,22 +1,27 @@
 #ifndef GAMEAREA_H
 #define GAMEAREA_H
-
+#include <QtGui/QFrame>
+#include "myitem.h"
+#include <QPainter>
+#include <QColor>
+#include <QTimer>
 #include <QFrame>
 
-namespace Ui {
-class gamearea;
+namespace gameArea {
+class GameArea;
 }
 
-class gamearea : public QFrame
+class GameArea : public QFrame
 {
     Q_OBJECT
     
 public:
-    explicit gamearea(QWidget *parent = 0);
-    ~gamearea();
+    GameArea(QWidget *parent = 0);
+    GameArea(int speed,QWidget *parent = 0);
+    ~GameArea();
     
 private:
-    Ui::gamearea *ui;
+
 };
 
 #endif // GAMEAREA_H

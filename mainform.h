@@ -25,9 +25,11 @@ private slots:
 
     void on_btnSpeedUp_clicked();
 
+    void timer_upDate();
+
 private:
     Ui::mainform *ui;
-    gamearea * gameArea;
+    GameArea * gameArea;
     QTimer * timer;
     int num;
 };

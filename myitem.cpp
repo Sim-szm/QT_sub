@@ -89,4 +89,57 @@ unsigned char* MyItem::getItem()
     }
     return currentItem;
 }
-
+int MyItem::currentItem_endPos(unsigned char *currentItem, unsigned char end)
+{
+    int k=0;
+    switch(end)
+    {
+    case 'd':
+    {
+        for(int row=3;row>=0;row--)
+        {
+            for(int col=0;col<4;col++)
+            {
+                if(*(currentItem+row*4+col) || k==1)
+                    return row;
+            }
+        }
+    }
+    case 'r':
+    {
+        for(int col=3;col>=0;col--)
+        {
+            for(int row=0;row<4;row++)
+            {
+                if(*(currentItem+row*4+col) || k==1)
+                    return col;
+            }
+        }
+    }
+    case 'l':
+    {
+        for(int col=3;col>=0;col--)
+        {
+            for(int row=0;row<4;row++)
+            {
+                if(*(currentItem+row*4+col) || k==1)
+                    return col;
+            }
+        }
+    }
+    default:
+        return 0;
+    }
+}
+unsigned char* MyItem::itemChange(unsigned char *currentItem)
+{
+    unsigned char* tmp=new unsigned char[16];
+    for(int i=0;i<4;i++)
+    {
+        for(int j=0;j<4;j++)
+        {
+            *(tmp+(3-j)*4+i)=*(currentItem+i*4+j); //rotate 90 du !
+        }
+    }
+    return tmp;
+}

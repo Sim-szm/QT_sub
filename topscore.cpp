@@ -3,9 +3,9 @@
 #include <QtSql>
 #include <QMessageBox>
 #include "database.h"
-topscore::topscore(QWidget *parent) :
+Topscore::Topscore(QWidget *parent) :
     QDialog(parent),
-    ui(new Ui::topscore)
+    ui(new Ui::Topscore)
 {
     ui->setupUi(this);
     if(!database::open()){
@@ -24,7 +24,7 @@ topscore::topscore(QWidget *parent) :
     database::close();
 }
 
-topscore::~topscore()
+Topscore::~Topscore()
 {
     delete ui;
 }

@@ -1,12 +1,12 @@
 #include "gamearea.h"
 
-gamearea::gamearea(QWidget *parent) :
+GameArea::GameArea(QWidget *parent) :
     QFrame(parent)
 {
 
 }
 
-gamearea::~gamearea()
+GameArea::~GameArea()
 {
 
 }

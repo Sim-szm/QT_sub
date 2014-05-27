@@ -1,5 +1,7 @@
 #include "mainform.h"
 #include "ui_mainform.h"
+#include "topscore.h"
+#include "input.h"
 #include <QtGui/QApplication>
 #include <QtSql>
 #include <QMessageBox>
@@ -74,7 +76,7 @@ void mainform::on_btnStart_clicked()
 
 void mainform::on_btnList_clicked()
 {
-    topscore diag;
+    Topscore diag;
     diag.show();
     diag.exec();
 }

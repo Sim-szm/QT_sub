@@ -4,19 +4,19 @@
 #include <QDialog>
 #include <QSqlTableModel>
 namespace Ui {
-class topscore;
+class Topscore;
 }
 
-class topscore : public QDialog
+class Topscore : public QDialog
 {
     Q_OBJECT
     
 public:
-    explicit topscore(QWidget *parent = 0);
-    ~topscore();
+    explicit Topscore(QWidget *parent = 0);
+    ~Topscore();
     QSqlTableModel * modelScore;
 private:
-    Ui::topscore *ui;
+    Ui::Topscore *ui;
 };
 
 #endif // TOPSCORE_H
