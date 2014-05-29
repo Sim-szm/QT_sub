@@ -6,6 +6,7 @@
 #include <QtSql>
 #include <QMessageBox>
 #include "database.h"
+#include "gamearea.h"
 mainform::mainform(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::mainform)

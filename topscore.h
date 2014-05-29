@@ -3,11 +3,10 @@
 
 #include <QDialog>
 #include <QSqlTableModel>
-namespace Ui {
-class Topscore;
-}
 
-class Topscore : public QDialog
+#include "ui_topscore.h"
+
+class Topscore : public QDialog, public Ui::topscore
 {
     Q_OBJECT
     
@@ -15,8 +14,6 @@ public:
     explicit Topscore(QWidget *parent = 0);
     ~Topscore();
     QSqlTableModel * modelScore;
-private:
-    Ui::Topscore *ui;
 };
 
 #endif // TOPSCORE_H

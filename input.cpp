@@ -1,24 +1,24 @@
-#include "input.h"
-#include "ui_input.h"
 #include <QtSql>
 #include <QMessageBox>
+
 #include "database.h"
-Input::Input(QWidget *parent) :
-    QDialog(parent),
-    ui(new Ui::Dialog)
+#include "input.h"
+
+
+Input::Input(QWidget *parent) : QDialog(parent)
 {
-    ui->setupUi(this);
+    setupUi(this);
 }
 
 Input::~Input()
 {
-    delete ui;
+
 }
 
 void Input::on_btnOK_clicked()
 {
     QString tempscore=QString::number(this->score,10);
-    QString tempname=ui->leName->text();
+    QString tempname= leName->text();
     QString id;
     if(!database::open()){
         QMessageBox::about(this,"Message","connect error");
