@@ -69,9 +69,6 @@ MyItem::MyItem()
 {
     qsrand(time(0));
 }
-MyItem::~Myitem()
-{
-}
 unsigned char* MyItem::getItem()
 {
     unsigned char* currentItem=NULL;
